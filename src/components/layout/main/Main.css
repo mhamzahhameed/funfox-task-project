@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Short+Stack&display=swap');
+.main {
+  font-family: "Short Stack", cursive;
+  font-weight: 400;
+  font-style: normal;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  width: 1193.7px;
+  height: 834px;
+  background: #f8d1e0;
+}
+
+.content-between {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* Adjust the top, left, right, and bottom values to position the content */
+  /* For example: */
+  padding: 70px 64px;
+}
+
+#company-logo {
+  position: absolute;
+  top: 0;
+  left: -1%;
+  width: 160px;
+  height: 91px;
+  transform: rotate(-17.1deg);
+  box-shadow: 0px 4px 4px 0px #ffffff40;
+}
+#week-1 {
+  position: absolute;
+  top: 1%;
+  left: 12.2%;
+  width: 153px;
+  height: 41px;
+}
+
+#pencil {
+  position: absolute;
+  width: 61.41px;
+  height: 37.33px;
+  top: 14.5%;
+  left: 0;
+}
+#scale {
+  position: absolute;
+  width: 92.1px;
+  height: 94.57px;
+  top: 14.5%;
+  right: 0;
+}
+#right-vector {
+  position: absolute;
+  width: 116.27px;
+  height: 788px;
+  top: 33.29px;
+  right: 0;
+}
+#left-vector {
+  position: absolute;
+  width: 76px;
+  height: 675px;
+  top: 113.6px;
+  left: 0;
+}
+#phone {
+  position: absolute;
+  width: 61.84px;
+  height: 55px;
+  top: 46.64%;
+  left: 0;
+}
+#open-book {
+  position: absolute;
+  width: 66.41px;
+  height: 60.66px;
+  top: 82.5%;
+  left: 0;
+  z-index: 1;
+}
+#book {
+  position: absolute;
+  width: 74.1px;
+  height: 73.37px;
+  top: 46.64%;
+  right: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+#cap {
+  position: absolute;
+  width: 71.21px;
+  height: 70.07px;
+  top: 79.5%;
+  right: 0;
+}
+#voice {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  left: 64px;
+  top: 774px;
+}
+#back {
+  position: absolute;
+  width: 41px;
+  height: 45px;
+  top: 777px;
+  left: 512px;
+  cursor: pointer;
+}
+#next {
+  position: absolute;
+  width: 41px;
+  height: 45px;
+  top: 777px;
+  left: 650px;
+  cursor: pointer;
+}
+#info {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  top: 774px;
+  left: 1081px;
+}
+#page-1 {
+  position: absolute;
+  width: 75px;
+  height: 37px;
+  top: 781px;
+  left: 564px;
+}
+#page-2 {
+  position: absolute;
+  width: 75px;
+  height: 37px;
+  top: 781px;
+  left: 564px;
+}
+@media only screen and (max-width: 1024px) {
+  .main {
+    width: 90%; /* Adjusted width for tablet size responsiveness */
+  }
+
+  .content-between {
+    padding: 70px 5%; /* Adjusted padding for tablet size responsiveness */
+  }
+}

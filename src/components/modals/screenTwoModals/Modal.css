@@ -1,0 +1,105 @@
+.modal-overlay {
+  font-family: "Short Stack", cursive;
+  font-weight: 400;
+  font-style: normal;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1193.7px;
+  height: 834px;
+  background: rgba(108, 93, 74, 0.9);
+  z-index: 2;
+}
+.modal-content {
+  width: 1106px;
+  height: 754px;
+  background: rgba(17, 17, 17, 0.2);
+  border: 3px solid rgba(255, 255, 255, 1);
+  border-radius: 10px;
+}
+.close-button {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  top: 60px;
+  left: 1084px;
+}
+
+.modal-content > p {
+  position: absolute;
+  width: 827px;
+  height: 79px;
+  top: 110px;
+  left: 183px;
+  font-family: Short Stack;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 39.41px;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  margin-top: 0px;
+}
+
+.modal-content > div {
+  position: absolute;
+  width: 1038px;
+  height: 105px;
+  top: 351px;
+  left: 82px;
+  padding-bottom: 5px;
+}
+
+.modal-content > div > p {
+    text-align: start;
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 29px;
+    margin-top:5px;
+}
+
+.paragraph-group {
+  display: flex;
+  height: 44px;
+  align-items: center;
+  font-size: 20px;
+  line-height: 29px;
+  text-align: start;
+  
+}
+#Quest-2 {
+  color: rgba(255, 255, 255, 1);
+  display: inline-block;
+}
+
+#Para-hr {
+  display: inline-block;
+  width: 637px;
+  height: 38px;
+  border: 3px dashed #cccccc;
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: #ffffff;
+  text-align: start;
+  padding-left: 10px;
+}
+#Para-hr hr {
+  width: 618px;
+  color: rgba(182, 182, 182, 1);
+  size: 24px;
+  line-height: 29px;
+  margin-top: -7px;
+}
+
+#Hint {
+  display: inline-block;
+  font-size: 20px;
+  line-height: 29px;
+  text-align: start;
+  color: rgba(255, 255, 255, 1);
+  margin-right: 15px;
+}

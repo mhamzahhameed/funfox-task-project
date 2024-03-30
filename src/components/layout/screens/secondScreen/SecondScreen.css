@@ -1,0 +1,175 @@
+.container-2 {
+  top: 70px; /* Adjusted top position to make child div 12% smaller vertically */
+  left: 64px; /* Adjusted left position to make child div 10% smaller horizontally */
+  width: 1065px; /* 1193.7px - 128.7px */
+  height: 694px;
+  position: absolute;
+  background-color: #f7f9fe;
+  border-radius: 20px;
+}
+
+.paragraph {
+  width: 1038px;
+  height: 117px;
+  color: #1e242f;
+  margin-left: 22px;
+}
+
+.paragraph .text-1 {
+  font-size: 32px;
+  text-align: start;
+  line-height: 39.41px;
+  margin: 12px auto;
+}
+
+.paragraph .text-2 {
+  font-size: 24px;
+  text-align: start;
+  line-height: 29.55px;
+  margin: 0;
+}
+
+.image {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+#day {
+  display: inline-block;
+  width: 235.03px;
+  height: 168px;
+  margin-left: 10%;
+}
+
+.image div {
+  display: inline-block;
+  width: 229.03px;
+  height: 162px;
+  border: 3px dashed #cccccc;
+  border-radius: 10px;
+  background-color: #ffffff;
+  margin-right: 10%;
+}
+
+#night {
+  display: inline-block;
+  margin: 6% auto;
+  width: 163px;
+  height: 133px;
+}
+
+.caption {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5px;
+}
+
+#day-caption {
+  width: 244px;
+  height: 29px;
+  line-height: 29px;
+  font-size: 20px;
+  margin-left: 11%;
+}
+
+#night-caption {
+  display: inline-block;
+  width: 294px;
+  height: 50px;
+  line-height: 24.63px;
+  font-size: 20px;
+  margin-right: 9%;
+}
+
+.paragraph-2 {
+  width: 1038px;
+  /* height: 105px; */
+  font-size: 20px;
+  line-height: 29px;
+  text-align: start;
+  margin-left: 22px;
+}
+
+.paragraph-2 p {
+  color: #1e242f;
+}
+.paragraph-3 {
+  display: flex;
+  height: 44px;
+  align-items: center;
+  font-size: 20px;
+  line-height: 29px;
+  /* text-align: start; */
+  margin-left: 22px;
+}
+#quest-2 {
+  color: #1e242f;
+  display: inline-block;
+}
+
+#para-hr {
+  display: inline-block;
+  width: 637px;
+  height: 38px;
+  border: 3px dashed #cccccc;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 16px;
+  background-color: #ffffff;
+}
+#para-hr hr {
+  width: 618px;
+  color: #b6b6b6;
+  size: 24px;
+  line-height: 29px;
+  margin-top: 25px;
+}
+
+#hint {
+  display: inline-block;
+  font-size: 20px;
+  line-height: 29px;
+  color: #1e242f;
+  margin-right: 15px;
+}
+
+.paragraph-4 {
+  width: 100%;
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 28px auto 18px auto;
+  
+}
+.paragraph-4 p {
+  width: 997px;
+  background: #25A3A1;
+  border: 3px dashed #A4Fdfb;
+  line-height: 33px;
+  text-align: start;
+  font-size: 24px;
+  padding: 10px;
+  color: #ffffff;
+}
+.paragraph-4 img {
+   width: 35px;
+   height: 35px;
+   vertical-align: middle;
+}
+
+.paragraph-5 {
+  width: 1038px;
+  font-size: 20px;
+  line-height: 25px;
+
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .container-2 {
+    width: calc(80% + 64px); /* Adjusted width for tablet size responsiveness */
+    right: 10%;
+  }
+}
