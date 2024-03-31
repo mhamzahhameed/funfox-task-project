@@ -47,6 +47,7 @@ const Main = () => {
     return () => {
       document.body.removeEventListener('click', handleClick);
     };
+    // eslint-disable-next-line
   }, []);
 
 useEffect(() => {
