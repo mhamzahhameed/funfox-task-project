@@ -120,7 +120,6 @@
   height: 45px;
   top: 777px;
   left: 512px;
-  cursor: pointer;
 }
 #next {
   position: absolute;
@@ -128,6 +127,8 @@
   height: 45px;
   top: 777px;
   left: 650px;
+}
+.active {
   cursor: pointer;
 }
 #info {
@@ -151,6 +152,32 @@
   top: 781px;
   left: 564px;
 }
+
+.blur {
+  filter: blur(5px);
+}
+
+#first-page-box {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  top: 782px;
+  left: 656px;
+  background-color: rgba(6, 142, 233, 0.2 );
+  border: 3px solid rgba(6, 142, 233, 0.4 );
+  transition: opacity 0.3s ease-in-out;
+}
+#second-page-box {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  top: 782px;
+  left: 512px;
+  background-color: rgba(6, 142, 233, 0.2 );
+  border: 3px solid rgba(6, 142, 233, 0.4 );
+  transition: opacity 0.3s ease-in-out;
+}
+
 @media only screen and (max-width: 1024px) {
   .main {
     width: 90%; /* Adjusted width for tablet size responsiveness */

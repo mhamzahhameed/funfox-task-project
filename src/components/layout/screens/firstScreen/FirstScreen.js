@@ -8,9 +8,9 @@ import Cloud4 from "../../../../assets/images/cloud4.png";
 import Cloud5 from "../../../../assets/images/cloud5.png";
 import Note from "../../../../assets/images/note.png";
 
-const FirstScreen = () => {
+const FirstScreen = ({isModalOpen}) => {
   return (
-    <div className="container-1">
+    <div className={isModalOpen === true ? 'container-1 blur': 'container-1'}>
       <div className="heading">
         <p>Elements of Story Writing</p>
       </div>

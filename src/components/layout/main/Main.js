@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Main.css";
 import Modal from "../../modals/screenTwoModals/Modal.js";
 import FirstScreen from "../screens/firstScreen/FirstScreen.js";
@@ -23,34 +23,103 @@ import Info from "../../../assets/images/info.png";
 const Main = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [showBlueBox, setShowBlueBox] = useState(false);
+
 
   const onPageChange = (pageIndex) => setCurrentPage(pageIndex);
-  const openModal = () => setIsModalOpen(true);
+  const openModal = () => {
+    console.log("Modal opened");
+    setIsModalOpen(true);
+  };
   const closeModal = () => setIsModalOpen(false);
+
+  useEffect(() => {
+    function handleClick(event) {
+      const isClickOutsideNextButton = !event.target.closest('#next');
+      if (isClickOutsideNextButton && currentPage === 1 ) {
+        setShowBlueBox(true);
+        setTimeout(() => setShowBlueBox(false), 500); // Hide after 1 second
+      }
+    }
+
+    document.body.addEventListener('click', handleClick);
+
+    return () => {
+      document.body.removeEventListener('click', handleClick);
+    };
+  }, []);
+
+useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.code === "Space" && currentPage === 2 && !isModalOpen) {
+        event.preventDefault();
+        openModal();
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [currentPage, isModalOpen]);
   return (
     <div className="main">
-      <div class="content-between">
+      <div
+        class={
+          isModalOpen === true ? "content-between blur" : "content-between"
+        }
+      >
         <img src={Funfox} alt="Company logo" id="company-logo" />
-        <img src={Pencil} alt="Pencil" id="pencil" />
-        <img src={OpenBook} alt="Open Book" id="open-book" />
-        <img src={Phone} alt="Phone" id="phone" />
-        <img src={Voice} alt="Voice" id="voice" />
-        <img src={Next} alt="Next" id="next" onClick={() => onPageChange(2)} />
-        <img src={Back} alt="back" id="back" onClick={() => onPageChange(1)} />
-        <img src={Info} alt="info" id="info" />
-        <img src={Cap} alt="Cap" id="cap" />
-        <img src={Scale} alt="Scale" id="scale" />
+        {!isModalOpen && <img src={Pencil} alt="Pencil" id="pencil" />}
+        {!isModalOpen && <img src={OpenBook} alt="Open Book" id="open-book" />}
+        {!isModalOpen && <img src={Phone} alt="Phone" id="phone" />}
+        {!isModalOpen && <img src={Voice} alt="Voice" id="voice" />}
+        {!isModalOpen && (
+          <img
+            src={Next}
+            alt="Next"
+            id="next"
+            onClick={() => onPageChange(2)}
+            className={currentPage === 1 ? "active" : "none"}
+          />
+        )}
+        {!isModalOpen && (
+          <img
+            src={Back}
+            alt="back"
+            id="back"
+            onClick={() => onPageChange(1)}
+            className={currentPage === 2 ? "active" : "none"}
+          />
+        )}
+        {!isModalOpen && <img src={Info} alt="info" id="info" />}
+        {!isModalOpen && <img src={Cap} alt="Cap" id="cap" />}
+        {!isModalOpen && <img src={Scale} alt="Scale" id="scale" />}
         <img src={RightVector} alt="Right Vector" id="right-vector" />
         <img src={LeftVector} alt="Left Vector" id="left-vector" />
         {currentPage === 1 && <img src={Week1} alt="Week1 logo" id="week-1" />}
         {currentPage === 1 && <img src={Book} alt="Book" id="book" />}
-        {currentPage === 2 && <img src={ToAsk} alt="To ask something" id="to_ask" onClick={openModal} />}
-        {currentPage === 1 && <img src={Page1} alt="Page Number" id="page-1" />}
-        {currentPage === 2 && <img src={Page2} alt="Page Number" id="page-2" />}
+        {currentPage === 2 && (
+          <img
+            src={ToAsk}
+            alt="To ask something"
+            id="to_ask"
+            onClick={openModal}
+          />
+        )}
+        {currentPage === 1 && !isModalOpen && (
+          <img src={Page1} alt="Page Number" id="page-1" />
+        )}
+        {currentPage === 2 && !isModalOpen && (
+          <img src={Page2} alt="Page Number" id="page-2" />
+        )}
       </div>
-      {currentPage !== 2 && <FirstScreen />}
-      {currentPage !== 1 && <SecondScreen />}
+      {currentPage !== 2 && <FirstScreen isModalOpen={isModalOpen} />}
+      {currentPage !== 1 && <SecondScreen isModalOpen={isModalOpen} />}
       <Modal isOpen={isModalOpen} onClose={closeModal} />
+      {showBlueBox && <span id="first-page-box"></span>}
+      {/* {showBlueBox && currentPage === 2 && <span id="second-page-box"></span>} */}
     </div>
   );
 };

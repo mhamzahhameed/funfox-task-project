@@ -6,9 +6,9 @@ import ClockHome from "../../../../assets/images/clockhome.png";
 import Clock from "../../../../assets/images/clock.png";
 import Home from "../../../../assets/images/home.png";
 
-const SecondScreen = () => {
+const SecondScreen = ({ isModalOpen }) => {
   return (
-    <div className="container-2">
+    <div className={isModalOpen === true ? 'container-2 blur': 'container-2'}>
       <div className="paragraph">
         <p className="text-1">
           Can you figure out the definition of setting from the following
