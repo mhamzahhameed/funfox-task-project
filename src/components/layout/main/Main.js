@@ -36,7 +36,8 @@ const Main = () => {
   useEffect(() => {
     function handleClick(event) {
       const isClickOutsideNextButton = !event.target.closest('#next');
-      if (isClickOutsideNextButton && currentPage === 1 ) {
+      const isClickOutsideBackButton = !event.target.closest('#back');
+      if (isClickOutsideNextButton && isClickOutsideBackButton ) {
         setShowBlueBox(true);
         setTimeout(() => setShowBlueBox(false), 500); // Hide after 1 second
       }
@@ -114,13 +115,15 @@ useEffect(() => {
         )}
         {currentPage === 2 && !isModalOpen && (
           <img src={Page2} alt="Page Number" id="page-2" />
-        )}
+          )}
+          {showBlueBox && currentPage === 1 && <span id="first-page-box"></span>}
+          {showBlueBox && currentPage === 2 && <span id="second-page-box"></span>}
+          {showBlueBox && currentPage === 2 && <span id="info-box"></span>}
       </div>
       {currentPage !== 2 && <FirstScreen isModalOpen={isModalOpen} />}
       {currentPage !== 1 && <SecondScreen isModalOpen={isModalOpen} />}
       <Modal isOpen={isModalOpen} onClose={closeModal} />
-      {showBlueBox && <span id="first-page-box"></span>}
-      {/* {showBlueBox && currentPage === 2 && <span id="second-page-box"></span>} */}
+
     </div>
   );
 };

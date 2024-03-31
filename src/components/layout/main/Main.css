@@ -172,7 +172,19 @@
   width: 26px;
   height: 26px;
   top: 782px;
-  left: 512px;
+  left: 516px;
+  background-color: rgba(6, 142, 233, 0.2 );
+  border: 3px solid rgba(6, 142, 233, 0.4 );
+  transition: opacity 0.3s ease-in-out;
+}
+
+.info-box {
+  position: absolute;
+  width: 64px;
+  height: 69px;
+  top: 46.64%;
+  right: 0;
+  z-index: 1;
   background-color: rgba(6, 142, 233, 0.2 );
   border: 3px solid rgba(6, 142, 233, 0.4 );
   transition: opacity 0.3s ease-in-out;
