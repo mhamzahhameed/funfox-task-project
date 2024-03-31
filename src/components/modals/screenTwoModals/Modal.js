@@ -27,7 +27,7 @@ const Modal = ({ isOpen, onClose }) => {
   return (
     <div className="modal-overlay">
       <div className="modal-content">
-      {showBlueBox && <span className="close-button-box"></span>}
+      {showBlueBox && isOpen &&  <span className="close-button-box"></span>}
         <img
           src={Close}
           alt="close-button"

@@ -107,10 +107,11 @@
 .close-button-box {
   position: absolute;
   width: 42px;
-  height: 42px;
-  top: 60px;
+  height: 40px;
+  top: 62px;
   left: 1084px;
-  background-color: rgba(6, 142, 233, 0.2 );
+  z-index: 3;
+  background-color: rgba(6, 142, 233, 0.3 );
   border: 3px solid rgba(6, 142, 233, 0.4 );
   transition: opacity 0.3s ease-in-out;
 }
