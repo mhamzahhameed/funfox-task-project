@@ -28,10 +28,18 @@ const Main = () => {
 
   const onPageChange = (pageIndex) => setCurrentPage(pageIndex);
   const openModal = () => {
-    console.log("Modal opened");
     setIsModalOpen(true);
   };
   const closeModal = () => setIsModalOpen(false);
+  document.addEventListener('keydown', function(event) {
+    
+    if (event.keyCode === 37) { 
+      onPageChange(1);
+    }
+    else if (event.keyCode === 39) {
+      onPageChange(2);
+    }
+  });
 
   useEffect(() => {
     function handleClick(event) {
