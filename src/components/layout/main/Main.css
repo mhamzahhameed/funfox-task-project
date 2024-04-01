@@ -4,12 +4,11 @@
   font-weight: 400;
   font-style: normal;
   position: relative;
-  display: flex;
-  justify-content: center;
-  /* align-items: center; */
   width: 1193.7px;
   height: 834px;
   background: #f8d1e0;
+  overflow: auto;
+  margin: auto;
 }
 
 .content-between {
@@ -18,8 +17,6 @@
   left: 0;
   right: 0;
   bottom: 0;
-  /* Adjust the top, left, right, and bottom values to position the content */
-  /* For example: */
   padding: 70px 64px;
 }
 
@@ -190,12 +187,21 @@
   transition: opacity 0.3s ease-in-out;
 }
 
-@media only screen and (max-width: 1024px) {
+ @media only screen and (min-height: 1366px) and (min-width: 1024px) {
   .main {
-    width: 90%; /* Adjusted width for tablet size responsiveness */
-  }
-
-  .content-between {
-    padding: 70px 5%; /* Adjusted padding for tablet size responsiveness */
+    top: 266px;
   }
 }
+ @media only screen and (max-height: 1024px) and (min-width: 1366px) {
+  .main {
+    top: 95px;
+  }
+}
+
+@media only screen and (max-height: 1180px) and (max-width: 820px) {
+  .main {
+    top: 173px ;
+  }
+}
+
+

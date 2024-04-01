@@ -20,7 +20,7 @@ const Modal = ({ isOpen, onClose }) => {
     return () => {
       document.body.removeEventListener('click', handleClick);
     };
-  }, []); // This dependency array ensures the effect runs only once, like componentDidMount
+  }, []);
 
   if (!isOpen) return null;
 

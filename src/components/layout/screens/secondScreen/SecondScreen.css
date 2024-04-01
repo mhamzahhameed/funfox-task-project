@@ -1,7 +1,7 @@
 .container-2 {
-  top: 70px; /* Adjusted top position to make child div 12% smaller vertically */
-  left: 64px; /* Adjusted left position to make child div 10% smaller horizontally */
-  width: 1065px; /* 1193.7px - 128.7px */
+  top: 70px; 
+  left: 64px; 
+  width: 1065px;
   height: 694px;
   position: absolute;
   background-color: #f7f9fe;
@@ -164,12 +164,4 @@
   font-size: 20px;
   line-height: 25px;
 
-}
-
-
-@media only screen and (max-width: 1024px) {
-  .container-2 {
-    width: calc(80% + 64px); /* Adjusted width for tablet size responsiveness */
-    right: 10%;
-  }
 }
