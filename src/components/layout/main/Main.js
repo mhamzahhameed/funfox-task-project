@@ -118,7 +118,7 @@ useEffect(() => {
           )}
           {showBlueBox && currentPage === 1 && <span id="first-page-box"></span>}
           {showBlueBox && currentPage === 2 && <span id="second-page-box"></span>}
-          {showBlueBox && currentPage === 2 && isModalOpen && <span id="info-box"></span>}
+          {showBlueBox && currentPage === 2 && <span id="info-box"></span>}
       </div>
       {currentPage !== 2 && <FirstScreen isModalOpen={isModalOpen} />}
       {currentPage !== 1 && <SecondScreen isModalOpen={isModalOpen} />}

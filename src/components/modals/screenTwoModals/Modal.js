@@ -11,7 +11,7 @@ const Modal = ({ isOpen, onClose }) => {
       const isClickOutsideNextButton = !event.target.closest('.close-button');
       if (isClickOutsideNextButton) {
         setShowBlueBox(true);
-        setTimeout(() => setShowBlueBox(false), 500); // Hide after 1 second
+        setTimeout(() => setShowBlueBox(false), 500);
       }
     }
 
